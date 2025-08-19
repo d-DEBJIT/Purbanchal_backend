@@ -15,7 +15,9 @@ const blogTagPivotRoutes = require('./routes/blogTagPivot.routes');
 const blogViewLogRoutes = require('./routes/blogViewLog.routes');
 const blogVoteRoutes = require('./routes/blogVote.routes');
 
-
+const NewsRoutes = require('./routes/news/News.routes')
+const NewsCategoryRoutes = require('./routes/news/NewsCategory.routes')
+const NewsMediaVariantRoutes = require('./routes/news/NewsMediaVariant.routes')
 
 
 
@@ -51,6 +53,10 @@ app.use('/api/blog-review-vote', blogReviewVoteRoutes);
 app.use('/api/blog-tag-pivot', blogTagPivotRoutes);
 app.use('/api/blog-view-log', blogViewLogRoutes);
 app.use('/api/blog-vote', blogVoteRoutes);
+
+app.use('/api/news', NewsRoutes);
+app.use('/api/news-category', NewsCategoryRoutes);
+app.use('/api/news-media-variant', NewsMediaVariantRoutes);
 
 
 const PORT = process.env.PORT || 5000;
